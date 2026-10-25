@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: glowing-enigma
+  config:
+    # Loads secrets from .env (git-ignored) when running locally; on Render, set these as environment variables
+    import: "optional:file:.env[.properties]"
+
+server:
+  port: 8085
+
+github:
+  token: ${GITHUB_TOKEN}
+  owner: ${GITHUB_OWNER}
+  repo: ${GITHUB_REPO}
+  branch: main
